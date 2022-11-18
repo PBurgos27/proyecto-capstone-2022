@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Crear-Horario</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-title">
+            <h4>
+                Registra tu horario
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <form action="/newHorario" method="POST">
+                            <input type="hidden" name="id_solicitud" value="1">
+                            <input type="checkbox" name="lunes">
+                            <input type="time" name="hora_i_l">
+                            <input type="time" name="hora_f_l">
+                            <input type="checkbox" name="martes">
+                            <input type="time" name="hora_i_m">
+                            <input type="time" name="hora_f_m">
+                            <input type="checkbox" name="miercoles">
+                            <input type="time" name="hora_i_mi">
+                            <input type="time" name="hora_f_mi">
+                            <input type="checkbox" name="jueves">
+                            <input type="time" name="hora_i_j">
+                            <input type="time" name="hora_f_j">
+                            <input type="checkbox" name="viernes">
+                            <input type="time" name="hora_i_v">
+                            <input type="time" name="hora_f_v">
+                            <input type="checkbox" name="sabado">
+                            <input type="time" name="hora_i_s">
+                            <input type="time" name="hora_f_s">
+                            <input type="checkbox" name="domingo">
+                            <input type="time" name="hora_i_d">
+                            <input type="time" name="hora_f_d">
+                            <br>
+                            <div style="display: inline;">
+                                <a href="/" class="btn-cancel">Cancel</a><input type="submit" class="btn-save"
+                                    value="Registrarse">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/adminJquery.js"> </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Doctor-Cita</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-title">
+            <h4>
+                <p>
+                Paciente: <span class="h5"><%= data.nombre %> <%= data.apellido %></span>
+                </p>
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <p>Tipo: <%= data.tipo_ci %></p>
+                    </div>
+                    <div class="mb-3">
+                        <p>Descripción: <%= data.descripcion_ci %></p>
+                    </div>
+                    <div class="mb-3">
+                        <p>Fecha: <%= data.fecha %></p>
+                    </div>
+                    <div class="mb-3">
+                        <p> Hora: <%= data.hora %></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <form action="/finalizeCita/<%= data.id_cita %>" method="post">
+                    <input type="hidden" name='estado_ci' value="1" />
+                    <button type="submit" class="btn btn-primary">Terminar cita</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/adminJquery.js"> </script>
+</body>
+
+</html>

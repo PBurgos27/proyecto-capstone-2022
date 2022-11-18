@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Doctor-Solicitud</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-title">
+            <h4>Completa esta solicitud</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <form action="/newSolicitud" method="post">
+                        <div class="mb-3">
+                            <input type="hidden" class="form-control" name="id_usuario" aria-describedby="text" value="<%= id %>" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Especialidad</label>
+                            <select class="form-control" name="especialidad">
+                                <% for(var i=0; i < espec.length; i++) { %>
+                                    <option value="<%= espec[i].nombre_es %>">
+                                        <%= espec[i].nombre_es %>
+                                    </option>
+                                    <% } %>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">N° CMP</label>
+                            <input type="text" class="form-control" name="cmp" aria-describedby="text" required
+                                maxlength="12" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">N° RNE</label>
+                            <input type="text" class="form-control" name="rne" aria-describedby="emailHelp"
+                                required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Direccion de consultorio</label>
+                            <input type="text" class="form-control" name="direc_consultorio" required />
+                        </div>
+                        <button class="btn btn-primary" id="sendSolicitud" type="submit">Enviar solicitud</button>
+                    </form>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/adminJquery.js"> </script>
+</body>
+
+</html>

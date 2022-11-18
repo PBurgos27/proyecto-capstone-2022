@@ -1,0 +1,35 @@
+{
+  "name": "capstone-project-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/capstone-final/capstone-project-final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/capstone-final/capstone-project-final/issues"
+  },
+  "homepage": "https://gitlab.com/capstone-final/capstone-project-final#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "image-to-base64": "^2.2.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "react-router-dom": "^6.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
