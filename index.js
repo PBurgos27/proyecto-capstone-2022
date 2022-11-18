@@ -1,5 +1,5 @@
 import express from 'express';
-import { PORT } from './config.js';
+//import { PORT } from './config.js';
 import cookieParser from 'cookie-parser';
 import {dirname, join} from 'path'
 import { fileURLToPath } from 'url'
@@ -30,6 +30,6 @@ app.use(adminRoutes);
 app.use(doctorRoutes);
 app.use(pacienteRoutes);
 
-
+const PORT = process.env.PORT || 3000
 app.listen(PORT);
 console.log(`Server is running in PORT: ${PORT}`)
